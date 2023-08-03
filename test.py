@@ -2,6 +2,7 @@ import unittest
 
 from my_sum import sum
 from fractions import Fraction
+from my_sum import blanckSpaces
 
 class TestSum(unittest.TestCase):
 
@@ -27,11 +28,18 @@ class TestSum(unittest.TestCase):
         """
         data3 = [Fraction(1,4), Fraction(1,4), Fraction(2,5)]
         result3 = sum(data3)
-        self.assertEqual(result3, 1)
-        
+        self.assertEqual(result3, Fraction(9,10))
+
+    def test_bad_type(self): 
+        data = "banana"
+        with self.assertRaises(TypeError): # estos es como un try catch
+            result = sum(data)
+
+    def test_count_blanks(self):
+        data = "Today is Monday"
+        result4 = blanckSpaces(data)
+        self.assertLess(result4, 10)
 
 if __name__ == "__main__":
     unittest.main()
 
-# Add new test funcntions
-#

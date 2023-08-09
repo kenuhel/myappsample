@@ -5,7 +5,15 @@ def sum(arg):
     return total
 
 
+def blanckSpaces(arg):
+    countB =0
+    for count in arg:
+        if count == " ":
+            countB +=1
+    return countB
 
+
+    
 
 
 

@@ -1,3 +1,6 @@
 log.txt
 /dir2
 /myenv
+/.venv
+.venv/
+*.pyc
